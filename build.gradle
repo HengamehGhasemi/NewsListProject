@@ -9,3 +9,15 @@ plugins {
     id 'org.jetbrains.kotlin.android' version '1.7.0' apply false
     id 'com.google.dagger.hilt.android' version '2.41' apply false
 }
+
+subprojects {
+
+        ext {
+            def keystorePropertiesFile = rootProject.file("news.properties")
+            def keystoreProperties = new Properties()
+            keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+
+            NEWS_URL = keystoreProperties["NEWS_URL"]
+            NEWS_API = keystoreProperties["NEWS_API"]
+        }
+}
