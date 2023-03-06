@@ -7,8 +7,9 @@ import androidx.compose.runtime.remember
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import androidx.navigation.compose.navArgument
 import androidx.navigation.compose.rememberNavController
+import androidx.navigation.navArgument
+import com.example.myapplication2.ui.newsList.NewsListScreen
 import com.example.myapplication2.ui.theme.MyApplication2Theme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -24,7 +25,7 @@ class MainActivity : ComponentActivity() {
                     startDestination =  "first_page_Screen"
                 ){
                     composable(route = "news_list_screen"){
-                        //inja migim hey composable in safhe inja bash
+                        NewsListScreen(navController = navController)
                     }
                    composable(
                        route = "news_detail_screen/{newsID}",
