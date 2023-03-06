@@ -2,7 +2,7 @@ package com.example.myapplication2.di
 
 import com.example.myapplication2.BuildConfig
 import com.example.myapplication2.data.remote.NewsApi
-import com.example.myapplication2.data.remote.NewsRepositoryImpl
+import com.example.myapplication2.data.remote.NewsListRepositoryImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -16,7 +16,7 @@ import javax.inject.Singleton
 object AppModule {
     @Singleton
     @Provides
-    fun provide(api : NewsApi) = NewsRepositoryImpl(api)
+    fun provide(api : NewsApi) = NewsListRepositoryImpl(api)
 
     @Singleton
     @Provides
