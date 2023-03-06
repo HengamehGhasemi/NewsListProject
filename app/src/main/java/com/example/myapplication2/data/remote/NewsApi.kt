@@ -1,6 +1,6 @@
 package com.example.myapplication2.data.remote
 
-import com.example.myapplication2.data.remote.responses.NewsHeadLines
+import com.example.myapplication2.data.remote.response.NewsHeadLinesDataModel
 import retrofit2.http.GET
 import retrofit2.http.Query
 
@@ -14,5 +14,5 @@ interface NewsApi {
         @Query("q") q : String?,
         @Query("pageSize") pageSize : Int?,
         @Query("page") page : Int?,
-    ): NewsHeadLines
+    ): NewsHeadLinesDataModel
 }
